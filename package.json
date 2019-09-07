@@ -1,0 +1,24 @@
+{
+    "name": "tinymce-ace",
+    "version": "1.0.0",
+    "description": "Tinymce plugin for Ace editor.",
+    "keywords": [
+        "javascript",
+        "tinymce",
+        "ace"
+    ],
+    "dependencies": {
+        "jquery": ">=3.4.1",
+        "ace-builds": ">=1.4.5"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/heminei/tinymce-ace.git"
+    },
+    "author": "Martin Bratvanov <heminei@heminei.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/heminei/tinymce-ace/issues"
+    },
+    "homepage": "https://github.com/heminei/tinymce-ace#readme"
+}
