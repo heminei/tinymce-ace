@@ -1,6 +1,6 @@
 {
     "name": "tinymce-ace",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Tinymce plugin for Ace editor.",
     "keywords": [
         "javascript",
@@ -8,10 +8,10 @@
         "ace"
     ],
     "dependencies": {
-        "jquery": ">=3.4.1",
-        "bootstrap": "4.3.1",
-        "ace-builds": ">=1.4.5",
-        "emmet-core": "1.0.0"
+        "jquery": ">=3.5.0",
+        "bootstrap": "~4.3",
+        "ace-builds": "~1.4",
+        "emmet-core": "~1.0"
     },
     "repository": {
         "type": "git",
