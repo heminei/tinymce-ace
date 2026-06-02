@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TinyMCE ACE Plugin Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 24px;
+        }
+
+        p {
+            margin: 0 0 12px;
+            line-height: 1.5;
+        }
+
+        .note {
+            margin: 0 0 20px;
+            padding: 12px;
+            border-radius: 6px;
+            background: #e8f2ff;
+            border: 1px solid #c8defa;
+            font-size: 14px;
+        }
+    </style>
+
+    <script src="/node_modules/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#editor',
+            license_key: "gpl",
+            height: 520,
+            menubar: 'file edit view insert format tools table help',
+            plugins: 'code ace',
+            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | bullist numlist | ace code',
+            external_plugins: {
+                ace: '/../src/plugin.js'
+            },
+            content_css: 'default',
+            setup: function (editor) {
+                editor.on('init', function () {
+                    if (editor.getContent({ format: 'text' }).trim() === '') {
+                        editor.setContent([
+                            '<p>Use <strong>ACE Editor</strong> from toolbar or Insert menu.</p>',
+                            '<p>Double-click an inserted code block to edit it.</p>'
+                        ].join(''));
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="page">
+        <h1>TinyMCE + ACE Plugin Example</h1>
+        <p>This page demonstrates the local plugin from <code>src/plugin.js</code>.</p>
+        <div class="note">
+            Tip: Serve this repository with a local web server (for example <code>npx serve .</code>) and open
+            <code>/example/index.html</code>.
+        </div>
+        <textarea id="editor"></textarea>
+    </div>
+</body>
+
+</html>
